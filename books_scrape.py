@@ -13,7 +13,8 @@ if response.status_code == 200:
     books=soup.find_all('article',class_='product_pod')
 
     # Loop through each book and print details
-
+    details
+with open("books_details.txt", "w", encoding="utf-8") as file:
     for book in books:
         title = book.h3.a['title']
         
@@ -23,6 +24,11 @@ if response.status_code == 200:
         rating=book.p['class'][1]
         print(f"Title :{title}\n Price:{price}\n Availability:{availability}\nRating: {rating}\n")
 
+        file.write(f"Title: {title}\nPrice: {price}\nAvailability: {availability}\nRating: {rating}\n\n")
+print("Book details have been saved to 'books_details.txt'.")
+
+
+   
 # book.p['class']:
 
 # This retrieves the value of the class attribute as a list: ['star-rating', 'Three'].
