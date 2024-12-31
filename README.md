@@ -1,14 +1,19 @@
-# Book Scraper
+# Book Details Scraper
 
-This Python script scrapes book information from the website [Books to Scrape](http://books.toscrape.com/) and displays details for each book on the first page:
-- **Title**
-- **Price**
-- **Availability**
-- **Rating**
+This Python script scrapes book details from the [Books to Scrape](http://books.toscrape.com/) website and saves the information to a text file named `books_details.txt`.
 
-## Requirements
+## Features
 
-Before running the script, ensure that you have Python installed along with the required libraries. Install the libraries using the following command:
+- **Scrapes Data**: Extracts book details including title, price, availability, and rating.
+- **Parses HTML**: Utilizes `BeautifulSoup` to parse HTML content.
+- **Saves Data**: Writes the scraped data to a text file for offline use.
 
+## Prerequisites
+
+Ensure you have the following libraries installed:
+- `requests`: For making HTTP requests.
+- `beautifulsoup4`: For parsing and navigating HTML content.
+
+Install them using pip if necessary:
 ```bash
 pip install requests beautifulsoup4
